@@ -16,9 +16,11 @@ public class Alice {
         String newWord = input.nextLine().toLowerCase();
         int position = sourceText.toLowerCase().indexOf(newWord);
         String locationOfWord = ("Index of " + newWord + " is " + position + " with a length of " + newWord.length());
+
         String firstHalf = sourceText.substring(0, position);
         String secondHalf = sourceText.substring(position + newWord.length(), sourceText.length()   );
         String stringWithoutWord = firstHalf.concat(secondHalf);
+
         if (sourceText.toLowerCase().contains(newWord)) {
             System.out.println("True. " + locationOfWord);
             System.out.println(stringWithoutWord);
